@@ -1,6 +1,6 @@
 ![obsidian-typora-vue-high-res](./obsidian-typora-vue-high-res.png)
 
-[![theme](https://img.shields.io/badge/theme-Obsidian-blueviolet.svg?color=blueviolet)](https://obsidian.md/) [![GitHub issues](https://img.shields.io/github/issues/ZekunC/Obsidian-Typora-Vue-Theme.svg?color=orange)](https://github.com/ZekunC/Obsidian-Typora-Vue-Theme/issues) [![GitHub issues](https://img.shields.io/github/issues-closed/ZekunC/Obsidian-Typora-Vue-Theme.svg?color=green)](https://github.com/ZekunC/Obsidian-Typora-Vue-Theme/issues?q=is%3Aissue+is%3Aclosed) [![GitHub release](https://img.shields.io/github/release/ZekunC/Obsidian-Typora-Vue-Theme.svg?color=brightgreen)](https://github.com/ZekunC/Obsidian-Typora-Vue-Theme/releases) [![GitHub stars](https://img.shields.io/github/stars/ZekunC/Obsidian-Typora-Vue-Theme.svg)](https://github.com/ZekunC/Obsidian-Typora-Vue-Theme/stargazers) 
+[![theme](https://img.shields.io/badge/theme-Obsidian-blueviolet.svg?color=blueviolet)](https://obsidian.md/) [![GitHub issues](https://img.shields.io/github/issues/maijz128/Obsidian-Typora-Vue-Theme.svg?color=orange)](https://github.com/maijz128/Obsidian-Theme-See-Yue-Lite/issues) [![GitHub issues](https://img.shields.io/github/issues-closed/maijz128/Obsidian-Typora-Vue-Theme.svg?color=green)](https://github.com/maijz128/Obsidian-Theme-See-Yue-Lite/issues?q=is%3Aissue+is%3Aclosed) [![GitHub release](https://img.shields.io/github/release/maijz128/Obsidian-Typora-Vue-Theme.svg?color=brightgreen)](https://github.com/maijz128/Obsidian-Theme-See-Yue-Lite/releases) [![GitHub stars](https://img.shields.io/github/stars/maijz128/Obsidian-Typora-Vue-Theme.svg)](https://github.com/maijz128/Obsidian-Theme-See-Yue-Lite/stargazers) 
 
 ## Notice
 
@@ -12,7 +12,7 @@
 
 ## About
 
-[Obsidian-Typora-Vue-Theme](https://github.com/ZekunC/Obsidian-Typora-Vue-Theme) (**v1.0.2**) is a theme for [Obsidian](https://obsidian.md/), which is inspired by [typora-vue-theme](https://github.com/blinkfox/typora-vue-theme) and [Blue Topaz](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/).
+**[Obsidian-Theme-See-Yue-Lite](https://github.com/maijz128/Obsidian-Theme-See-Yue-Lite)** is a theme for [Obsidian](https://obsidian.md/), which is inspired by [typora-vue-theme](https://github.com/blinkfox/typora-vue-theme) and [Blue Topaz](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/).
 
 The file style is choosed  to be as similar with [typora-vue-theme](https://github.com/blinkfox/typora-vue-theme) as possible so that you can use these two kinds of software simultaneously and switch in a low-cost way. 
 
@@ -89,7 +89,7 @@ Search `Typora-Vue` in Obsidian community theme store and download it.
 
 ### Manually
 
-Manually download the `theme.css` or `obsidian.css` from [Releases](https://github.com/ZekunC/Obsidian-Typora-Vue-Theme/releases) to your local `\.obsidian\themes\` and rename it to `Obsidian-Typora-Vue.css`.
+Manually download the `theme.css` or `obsidian.css` from [Releases](https://github.com/maijz128/Obsidian-Theme-See-Yue-Lite/releases) to your local `\.obsidian\themes\` and rename it to `Obsidian-Typora-Vue.css`.
 
 ## Contributing
 
