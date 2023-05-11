@@ -20,7 +20,18 @@ body{
 	--h4-size: 1.2em;
 	--h5-size: 1em;
 	--h6-size: 1em;
+	--h1-color: #fd7c5e;
+    --h2-color: #699A82;
+    --h3-color: #81b29a;
+    --h4-color: #81b29a;
+    --h5-color: #81b29a;
+    --h6-color: #81b29a;
 	
+	/* Line heights */
+	--line-height-normal: 1.6;
+	--line-height-tight: 1.4;
+	
+	--font-default: 'Microsoft YaHei',system-ui,-apple-system,BlinkMacSystemFont,Helvetica,sans-serif,'iconfont','icomoon','FontAwesome','Material Icons Extended','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji',emoji;
 	text-shadow: 0 0 0.86px #b1ada6d9, 0 0 0.75px #7c7c7cdd, 0 0 0.56px #302f2d4b;
    -webkit-text-stroke: 0.015px currentcolor;
 	font-feature-settings: "liga" 0;
@@ -375,8 +386,25 @@ thead {
 /*Header END*/
 
 /*Cursor line BEGIN*/
+body{
+	--list-marker-color: var(--text-faint);
+    --list-marker-color-hover: var(--text-muted);
+    --list-marker-color-collapsed: var(--text-accent);
+	
+}
+
 .cm-active.cm-line{
 	background:var(--cus-highlight-cursor-line) !important;
+}
+
+.cm-formatting-list-ol {
+	unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+	text-transform: none;
+	text-indent: 0px !important;
+	text-align: start !important;
+	text-align-last: start !important;
+	list-style: decimal-leading-zero;
 }
 /*Cursor line END*/
 
@@ -393,3 +421,20 @@ thead {
 	padding-left: 4px;
 }
 /*Navigator File END*/
+
+/*A Link BEGIN*/
+body{
+	--link-external-decoration: none;
+	--link-external-decoration-hover: none;
+	--link-external-color: #81b29a;
+	--link-external-color-hover: #e2542e;
+}
+.cm-link  {
+	border-bottom: 1px dashed #81b29a;
+}
+.cm-link:hover {
+    /* color: #e2542e !important;  */
+    border-bottom: 1px solid #e2542e;
+}
+/*A Link END*/
+

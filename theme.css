@@ -20,7 +20,18 @@ body{
 	--h4-size: 1.2em;
 	--h5-size: 1em;
 	--h6-size: 1em;
+	--h1-color: #fd7c5e;
+    --h2-color: #699A82;
+    --h3-color: #81b29a;
+    --h4-color: #81b29a;
+    --h5-color: #81b29a;
+    --h6-color: #81b29a;
 	
+	/* Line heights */
+	--line-height-normal: 1.6;
+	--line-height-tight: 1.4;
+	
+	--font-default: 'Microsoft YaHei',system-ui,-apple-system,BlinkMacSystemFont,Helvetica,sans-serif,'iconfont','icomoon','FontAwesome','Material Icons Extended','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji',emoji;
 	text-shadow: 0 0 0.86px #b1ada6d9, 0 0 0.75px #7c7c7cdd, 0 0 0.56px #302f2d4b;
    -webkit-text-stroke: 0.015px currentcolor;
 	font-feature-settings: "liga" 0;
@@ -57,18 +68,33 @@ body{
 }
 
 /* blockquote BEGIN*/
+body{
+
+}
 .markdown-rendered blockquote{
 	padding: var(--size-4-2) var(--size-4-3);
 	background-color: hsla(var(--interactive-accent-hsl), 0.1);
 	border-left: 4px solid hsl(var(--interactive-accent-hsl));
 }
+.HyperMD-quote{
+	color: rgb(102, 102, 102);
+    background-color: rgba(236, 244, 249, 0.6);
+    /* font-size: 18px; */
+    /* font-family: 霞鹜文楷; */
+    /* border-left: 0.2em solid rgb(132, 150, 176); */
+    /* border-color: rgb(132, 150, 176); */
+    /* padding: 10px; */
+    /* border-radius: 5px; */
+}
 
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before{
-	border-left: 4px solid hsl(var(--interactive-accent-hsl));
+	/* border-left: 4px solid hsl(var(--interactive-accent-hsl)); */
+	border-left: 0.2em solid rgb(132, 150, 176);
 }
 
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-	background-color: hsla(var(--interactive-accent-hsl), 0.1);
+	/* background-color: hsla(var(--interactive-accent-hsl), 0.1); */
+	padding: 10px;
 }
 
 .cm-formatting-quote {
@@ -375,8 +401,25 @@ thead {
 /*Header END*/
 
 /*Cursor line BEGIN*/
+body{
+	--list-marker-color: var(--text-faint);
+    --list-marker-color-hover: var(--text-muted);
+    --list-marker-color-collapsed: var(--text-accent);
+	
+}
+
 .cm-active.cm-line{
 	background:var(--cus-highlight-cursor-line) !important;
+}
+
+.cm-formatting-list-ol {
+	unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+	text-transform: none;
+	text-indent: 0px !important;
+	text-align: start !important;
+	text-align-last: start !important;
+	list-style: decimal-leading-zero;
 }
 /*Cursor line END*/
 
@@ -393,3 +436,189 @@ thead {
 	padding-left: 4px;
 }
 /*Navigator File END*/
+
+/*A Link BEGIN*/
+body{
+	--link-external-decoration: none;
+	--link-external-decoration-hover: none;
+	--link-external-color: #81b29a;
+	--link-external-color-hover: #e2542e;
+}
+.cm-link  {
+	border-bottom: 1px dashed #81b29a;
+}
+.cm-link:hover {
+    /* color: #e2542e !important;  */
+    border-bottom: 1px solid #e2542e;
+}
+/*A Link END*/
+
+/*Tag BEGIN*/
+body{
+	--theme-color: var(--interactive-accent);
+    --theme-color-translucent-06: hsla(var(--interactive-accent-hsl),0.6);
+    --theme-color-translucent-04: hsla(var(--interactive-accent-hsl),0.4);
+    --theme-color-translucent-02: hsla(var(--interactive-accent-hsl),0.2);
+    --theme-color-translucent-015: hsla(var(--interactive-accent-hsl),0.15);
+    --theme-color-translucent-01: hsla(var(--interactive-accent-hsl),0.1);
+    --theme-color-translucent-005: hsla(var(--interactive-accent-hsl),0.05);
+    --theme-color-translucent-001: hsla(var(--interactive-accent-hsl),0.01);
+}
+
+/*rainbow tag*/
+body.rainbow-tag .tag:not(.token):nth-child(5n+1) {
+  background-color: var(--theme-color-translucent-01);
+  color: var(--theme-color);
+}
+
+body.rainbow-tag .tag:not(.token):nth-child(5n+2) {
+  background-color: var(--theme-color-translucent-01);
+  color: var(--theme-color);
+  filter: hue-rotate(70deg);
+}
+
+body.rainbow-tag .tag:not(.token):nth-child(5n+3) {
+  background-color: var(--theme-color-translucent-01);
+  color: var(--theme-color);
+  filter: hue-rotate(140deg);
+}
+
+body.rainbow-tag .tag:not(.token):nth-child(5n+4) {
+  background-color: var(--theme-color-translucent-01);
+  color: var(--theme-color);
+  filter: hue-rotate(210deg);
+}
+
+body.rainbow-tag .tag:not(.token):nth-child(5n) {
+  background-color: var(--theme-color-translucent-01);
+  color: var(--theme-color);
+  filter: hue-rotate(280deg);
+}
+
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error {
+  background-color: var(--theme-color-translucent-01) !important;
+  color: var(--theme-color) !important;
+}
+
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error {
+  background-color: var(--theme-color-translucent-01) !important;
+  color: var(--theme-color) !important;
+  filter: hue-rotate(210deg);
+}
+
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error {
+  background-color: var(--theme-color-translucent-01) !important;
+  color: var(--theme-color) !important;
+  filter: hue-rotate(70deg);
+}
+
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error {
+  background-color: var(--theme-color-translucent-01) !important;
+  color: var(--theme-color) !important;
+  filter: hue-rotate(280deg);
+}
+
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
+body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error {
+  background-color: var(--theme-color-translucent-01) !important;
+  color: var(--theme-color) !important;
+  filter: hue-rotate(140deg);
+}
+
+
+
+/*Tag END*/
