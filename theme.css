@@ -27,9 +27,14 @@ body{
     --h5-color: #81b29a;
     --h6-color: #81b29a;
 	
+	  --interactive-accent-rgb: 45, 130, 204;
+	--interactive-accent-hover: var(--color-accent-2);
+	
 	/* Line heights */
 	--line-height-normal: 1.6;
 	--line-height-tight: 1.4;
+	
+	
 	
 	--font-default: 'Microsoft YaHei',system-ui,-apple-system,BlinkMacSystemFont,Helvetica,sans-serif,'iconfont','icomoon','FontAwesome','Material Icons Extended','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji',emoji;
 	text-shadow: 0 0 0.86px #b1ada6d9, 0 0 0.75px #7c7c7cdd, 0 0 0.56px #302f2d4b;
@@ -53,6 +58,8 @@ body{
 	--table-header-color: #e2542e;
 	--table-row-background-hover: #f2f2f2;
 	--cus-highlight-cursor-line: rgba(245,204,142,0.12);
+	
+
 }
 
 .theme-dark{
@@ -65,6 +72,8 @@ body{
 	--table-header-color: #e2542e;
 	--table-row-background-hover: #171717;
 	--cus-highlight-cursor-line: rgba(225,225,225, 0.12);
+	
+
 }
 
 /* blockquote BEGIN*/
@@ -453,171 +462,112 @@ body{
 }
 /*A Link END*/
 
+
+
 /*Tag BEGIN*/
 body{
-	--theme-color: var(--interactive-accent);
-    --theme-color-translucent-06: hsla(var(--interactive-accent-hsl),0.6);
-    --theme-color-translucent-04: hsla(var(--interactive-accent-hsl),0.4);
-    --theme-color-translucent-02: hsla(var(--interactive-accent-hsl),0.2);
-    --theme-color-translucent-015: hsla(var(--interactive-accent-hsl),0.15);
+	--accent-h: 207;
+    --accent-s: 77%;
+    --accent-l: 54%;
+    --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+	--interactive-accent-hsl: var(--color-accent-hsl);
+	
+	/* --interactive-accent-rgb: 45, 130, 204; */
+	/* --interactive-accent-hover: var(--color-accent-2); */
+	/* --tag-theme-color: 45, 130, 204;  */
+	--tag-theme-color: var(--tag-text);
+	/* --theme-color: var(--interactive-accent); */
+    /* --theme-color-translucent-06: hsla(var(--interactive-accent-hsl),0.6); */
+    /* --theme-color-translucent-04: hsla(var(--interactive-accent-hsl),0.4); */
+    /* --theme-color-translucent-02: hsla(var(--interactive-accent-hsl),0.2); */
+    /* --theme-color-translucent-015: hsla(var(--interactive-accent-hsl),0.15); */
     --theme-color-translucent-01: hsla(var(--interactive-accent-hsl),0.1);
-    --theme-color-translucent-005: hsla(var(--interactive-accent-hsl),0.05);
-    --theme-color-translucent-001: hsla(var(--interactive-accent-hsl),0.01);
+    /* --theme-color-translucent-005: hsla(var(--interactive-accent-hsl),0.05); */
+    /* --theme-color-translucent-001: hsla(var(--interactive-accent-hsl),0.01); */
+	--tag-background-color-01: hsla(var(--interactive-accent-hsl),0.1);
 }
 
-/*rainbow tag*/
-body.rainbow-tag .tag:not(.token):nth-child(5n+1) {
-  background-color: var(--theme-color-translucent-01);
-  color: var(--theme-color);
+
+.theme-light{
+	  --tag-text: #f8f8f8;
+	  --stag1: #fa8787;
+	  --stag1-bg: #eb2727;
+	  --stag2: #fdbd5c;
+	  --stag2-bg: #ee9002;
+	  --stag3: #50ce3a;
+	  --stag3-bg: #22ac09;
+	  --tag1: #2573f0;
+	  --tag2: #2193f0;
+	  --tag3: #17a5e7;
+	  --tag4: #14acc7;
+	  --tag5: #10bdbd;
+	  --tag-dailynote: #0077ff;
+	  --tag-dailynote-bg: #277CDD;
+	  --tag-weeklynote: #4b9fff;
+	  --tag-weeklynote-bg: #6aafff;
+	  --tag-questions: #b68fff;
+	  --tag-questions-bg: #b085ff;
+	  --tag-ideas: #ceb900;
+	  --tag-ideas-bg: #444444d8;
 }
 
-body.rainbow-tag .tag:not(.token):nth-child(5n+2) {
-  background-color: var(--theme-color-translucent-01);
-  color: var(--theme-color);
-  filter: hue-rotate(70deg);
+.theme-dark{
+	
+ --tag-text: #e4e4e4;
+  --stag1: #f08383;
+  --stag1-bg: #bd1919;
+  --stag2: #e7b263;
+  --stag2-bg: #ac6700;
+  --stag3: #77df89;
+  --stag3-bg: #058c1c;
+  --tag1: #3674bb;
+  --tag2: #3685ad;
+  --tag3: #2a8f91;
+  --tag4: #43804f;
+  --tag5: #5f932e;
+
+  --tag-dailynote: #98c8ff;
+  --tag-dailynote-bg: #0f60bd;
+  --tag-weeklynote: #d1e6ff;
+  --tag-weeklynote-bg: #3971b1;
+  --tag-questions: #d4bdff;
+  --tag-questions-bg: #6640ae;
+  --tag-ideas: #fcfcc0;
+  --tag-ideas-bg: #565656d8;
 }
 
-body.rainbow-tag .tag:not(.token):nth-child(5n+3) {
-  background-color: var(--theme-color-translucent-01);
-  color: var(--theme-color);
-  filter: hue-rotate(140deg);
+.cm-hashtag{
+	background-color: var(--theme-color-translucent-01) !important;
+	color: var(--tag1) !important;
 }
 
-body.rainbow-tag .tag:not(.token):nth-child(5n+4) {
-  background-color: var(--theme-color-translucent-01);
-  color: var(--theme-color);
-  filter: hue-rotate(210deg);
-}
+ span.cm-hashtag-begin:nth-child(5n+1),
+ span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag{
+	 filter: hue-rotate(0deg);
+ }
+ 
+  span.cm-hashtag-begin:nth-child(5n+2),
+ span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag{
+	 filter: hue-rotate(70deg);
+ }
 
-body.rainbow-tag .tag:not(.token):nth-child(5n) {
-  background-color: var(--theme-color-translucent-01);
-  color: var(--theme-color);
-  filter: hue-rotate(280deg);
-}
+ span.cm-hashtag-begin:nth-child(5n+3),
+ span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag{
+	 filter: hue-rotate(140deg);
+ }
 
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+1)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error {
-  background-color: var(--theme-color-translucent-01) !important;
-  color: var(--theme-color) !important;
-}
+ span.cm-hashtag-begin:nth-child(5n+4),
+ span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag{
+	 filter: hue-rotate(210deg);
+ }
+ 
+  span.cm-hashtag-begin:nth-child(5n+5),
+ span.cm-hashtag-begin:nth-child(5n+5)+span.cm-hashtag{
+	 filter: hue-rotate(280deg);
+ }
+ 
 
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+2)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error {
-  background-color: var(--theme-color-translucent-01) !important;
-  color: var(--theme-color) !important;
-  filter: hue-rotate(210deg);
-}
 
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+3)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error {
-  background-color: var(--theme-color-translucent-01) !important;
-  color: var(--theme-color) !important;
-  filter: hue-rotate(70deg);
-}
-
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n+4)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error {
-  background-color: var(--theme-color-translucent-01) !important;
-  color: var(--theme-color) !important;
-  filter: hue-rotate(280deg);
-}
-
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error:not([class*="cm-hashtag-end"])+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"]),
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-hashtag-end,
-body.rainbow-tag .cm-s-obsidian span.cm-hashtag-begin:nth-child(5n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error+span.cm-hashtag.cm-meta:not([class*="cm-hashtag-begin"])+span.cm-hashtag.cm-meta.cm-overlay.cm-spell-error {
-  background-color: var(--theme-color-translucent-01) !important;
-  color: var(--theme-color) !important;
-  filter: hue-rotate(140deg);
-}
 
 
 
